@@ -6,8 +6,9 @@ import os
 app = Flask(__name__, template_folder='templates')
 
 def load_battles():
+    file_path = os.path.join(app.static_folder, 'battles.json')
     try:
-        with open('static/info/battles.json', 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             print("Opened")
             return json.load(f)
     except FileNotFoundError:
