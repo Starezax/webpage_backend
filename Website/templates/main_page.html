@@ -10,6 +10,7 @@
                 object-fit: cover;
                 display: flex;
             }
+
             p.heading {
                 font-weight: bold;
             }
@@ -21,23 +22,33 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                height: 50px;
-                width: 1920px;
-                justify-content: space-between;
+                height: 60px; /* Increased height for buttons */
+                justify-content: center;
                 align-items: center;
-                padding: 20px 110px;
+                padding: 0 50px; /* Adjusted padding for better alignment */
+                z-index: 100;
             }
 
             .navigation_links {
                 display: flex;
-                gap: 200px;
+                gap: 50px; /* Reduced gap between buttons */
             }
 
-            .navigation_links a {
+            .navigation_links button {
                 color: white;
-                text-decoration: none;
-                font-size: 25px;
+                background-color: transparent;
+                border: 2px solid white; /* Border for better contrast */
+                border-radius: 30px; /* Rounded corners */
+                font-size: 20px;
                 font-family: Tahoma;
+                padding: 10px 20px; /* Padding for better button size */
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+            }
+
+            .navigation_links button:hover {
+                background-color: white; /* Background color on hover */
+                color: #536b39; /* Text color change on hover */
             }
 
             .image-container {
@@ -75,6 +86,16 @@
                 color: white;
                 font-size: 1.2em;
                 bottom: 10px;
+                background-color: #154c09; /* Adjusted background color */
+                border: none;
+                border-radius: 30px; /* Rounded corners */
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: background-color 0.3s; /* Smooth transition for hover effect */
+            }
+
+            .text-overlay button:hover {
+                background-color: #2a7027; /* Darker shade on hover */
             }
         </style>
 
@@ -82,7 +103,7 @@
     <body style="background-color: #bfaa6a;">
         <div class="navigation">
             <div class="navigation_links">
-                <button onclick="window.location.href='/main_page'">Головна</button>
+                <button onclick="window.location.href='/'">Головна</button>
                 <button onclick="window.location.href='/wikipedia'">Довідник</button>
                 <button onclick="window.location.href='/map'">Карта</button>
                 <button onclick="window.location.href='/about'">Про нас</button>
@@ -90,7 +111,7 @@
         </div>
         
         <div class="image-container">
-            <img src="/images/cool.jpg">
+            <img src="{{ url_for('static', filename='images/cool.jpg') }}" alt="Cool Image">
             <div class="text-overlay">
                 <strong>ВІЙСЬКОВА ТЕХНІКА ТА БОЙОВІ КОНФЛІКТИ</strong>
                 <button onclick="window.location.href='/about'">Про нас</button>

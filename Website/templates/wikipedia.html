@@ -15,7 +15,7 @@
             font-family: Tahoma;
             display: flex;
             min-height: 100vh;
-        }   
+        }
 
         .navigation {
             position: fixed;
@@ -26,19 +26,30 @@
             height: 60px;
             display: flex;
             align-items: center;
-            padding: 0 110px;
+            padding: 0 50px;
             z-index: 100;
         }
 
         .navigation_links {
             display: flex;
-            gap: 200px;
+            gap: 50px;
         }
 
-        .navigation_links a {
+        .navigation_links button {
             color: white;
-            text-decoration: none;
-            font-size: 25px;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 20px;
+            font-family: Tahoma;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navigation_links button:hover {
+            background-color: white;
+            color: #536b39;
         }
 
         .content-wrapper {
@@ -82,7 +93,6 @@
         .interactive_time_period h3 {
             color: white;
             font-size: 20px;
-            /* margin-bottom: 5px; */
             padding: 20px;
         }
 
@@ -104,11 +114,9 @@
             color: white;
             border-radius: 40px;
             padding: 15px;
-            /* text-align: center; */
             font-size: 30px;
             margin-bottom: 20px;
         }
-
 
         .same_class_weapons {
             display: flex;
@@ -155,9 +163,12 @@
             width: 80%;
             padding: 10px;
             margin-left: 10%;
-            /* vertical-align: bottom; */
-            /* margin-bottom: ; */
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .page button:hover {
+            background-color: #2a7027;
         }
 
         .class_heading {
@@ -177,10 +188,10 @@
 <body>
     <div class="navigation">
         <div class="navigation_links">
-            <a href="/main_page.html">Головна</a>
-            <a href="/wikipedia.html">Довідник</a>
-            <a href="/map.html">Карта</a>
-            <a href="/about.html">Про нас</a>
+            <button onclick="window.location.href='/'">Головна</button>
+            <button onclick="window.location.href='/wikipedia'">Довідник</button>
+            <button onclick="window.location.href='/map'">Карта</button>
+            <button onclick="window.location.href='/about'">Про нас</button>
         </div>
     </div>
 
@@ -190,12 +201,12 @@
             <p class="search">Пошук...</p>
             <div class="interactive_time_period">
                 <h3>Часовий період:</h3>
-                <a href="/wiki_ww1.html">Перша світова війна</a>
-                <a href="/wiki_ww2.html">Друга світова війна</a>
-                <a href="/wiki_ussr.html">Рядянський період</a>
-                <a href="/wiki_1991.html">Незалежність (1991)</a>
-                <a href="/wiki_2014.html">Незалежність (2014)</a>
-                <a href="/wiki_2022.html">Незалежність (2022)</a>
+                <a href="/wiki_ww1">Перша світова війна</a>
+                <a href="/wiki_ww2">Друга світова війна</a>
+                <a href="/wiki_ussr">Рядянський період</a>
+                <a href="/wiki_1991">Незалежність (1991)</a>
+                <a href="/wiki_2014">Незалежність (2014)</a>
+                <a href="/wiki_2022">Незалежність (2022)</a>
             </div>
         </div>
 
@@ -206,74 +217,70 @@
 
             <div class="same_class_weapons">
                 <div class="page">
-                    <img src="/images/RMMV_HX3_unveiled.jpg">
+                    <img src="{{ url_for('static', filename='images/RMMV_HX3_unveiled.jpg') }}">
                     <h4>RMMV HX</h4>
                     <p>HX — серія спеціально розроблених тактичних військових вантажівок виробництва Rheinmetall MAN Military Vehicles</p>
                     <button>Дізнатися більше</button>
                 </div>
         
                 <div class="page">
-                    <img src="/images/m1070.jpg">
+                    <img src="{{ url_for('static', filename='images/m1070.jpg') }}">
                     <h4>M1070</h4>
                     <p>M1070 або Oshkosh HET —америк. танковий транспортер виробництва Oshkosh. Основним призначенням є транспортування танка M1 Abrams.</p>
                     <button>Дізнатися більше</button>
                 </div>
 
                 <div class="page">
-                    <img src="/images/maz_cropped.jpg">
+                    <img src="{{ url_for('static', filename='images/maz_cropped.jpg') }}">
                     <h4>МАЗ-537</h4>
                     <p>МАЗ-537 — типовий представник сімейства радянських чотирьохосних великовантажних тягачів високої прохідності.</p>
                     <button>Дізнатися більше</button>
                 </div>
         
                 <div class="page">
-                    <img src="/images/FMTV.jpg">
+                    <img src="{{ url_for('static', filename='images/FMTV.jpg') }}">
                     <h4>FMTV</h4>
                     <p>FMTV — сімейство уніфікованих вантажних автомобілів військового призначення, одна з основних систем Сухопутних військ США.</p>
                     <button>Дізнатися більше</button>
                 </div>
-                        
                 <div class="page">
-                    <img src="/images/Jelcz_800.jpg">
+                    <img src="{{ url_for('static', filename='images/Jelcz_800.jpg') }}">
                     <h4>Jelcz 800</h4>
                     <p>Jelcz 800 — серія військових польських вантажівок виробництва Jelcz. Вантажівка побудована на чотиривісному шасі, може мати колісні формули 8×8, 8×6 та 8×4.</p>
                     <button>Дізнатися більше</button>
                 </div>
                         
                 <div class="page">
-                    <img src="/images/kraz.jpg">
+                    <img src="{{ url_for('static', filename='images/kraz.jpg') }}">
                     <h4>КрАЗ-6446</h4>
                     <p>КрАЗ-6446 — сідловий тягач підвищеної прохідності з колісною формулою 6x6 представлений в 1994 році є продовженням сімейства 6322.</p>
                     <button>Дізнатися більше</button>
                 </div>
-
             </div>
-
 
             <h3 id="light_trucks" class="class_heading">Легкі автомобілі</h3>
 
             <div class="same_class_weapons">
                 <div class="page">
-                    <img src="/images/Mitsubishi_Type_73.jpg">
+                    <img src="{{ url_for('static', filename='images/Mitsubishi_Type_73.jpg') }}">
                     <h4>Mitsubishi Type 73</h4>
                     <p>Mitsubishi Type 73 — компактний армійський позашляховик японської компанії Mitsubishi Motors, що випускається з 1973 року для сил самооборони Японії.</p>
                     <button>Дізнатися більше</button>
                 </div>
         
                 <div class="page">
-                    <img src="/images/bhd23.jpg">
+                    <img src="{{ url_for('static', filename='images/bhd23.jpg') }}">
                     <h4>Богдан 2351</h4>
                     <p>Богдан 2351 — багатоцільовий автомобіль у форм-факторі пікапу, повнопривідний позашляховик. Виготовляється корпорацією Богдан.</p>
                     <button>Дізнатися більше</button>
                 </div>
 
                 <div class="page">
-                    <img src="/images/volt.jpg">
+                    <img src="{{ url_for('static', filename='images/volt.jpg') }}">
                     <h4>VOLS</h4>
                     <p>VOLS — військовий багі, створений українським підприємцем Володимиром Садиком після повномасштабного російського вторгнення в Україну в 2022 році.</p>
                     <button>Дізнатися більше</button>
                 </div>
-
             </div>
         </div>
     </div>
