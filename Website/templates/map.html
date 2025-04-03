@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <title>Militaris - Карта</title>
     <style>
+        /* Reset margin and padding for consistency */
         body {
+            margin: 0;
+            padding: 0;
             background-color: #bfaa6a;
             font-family: Tahoma;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .navigation {
             position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             background-color: #536b39;
-            width: 100%;
             height: 60px;
             display: flex;
             align-items: center;
@@ -34,7 +36,6 @@
             border: 2px solid white;
             border-radius: 30px;
             font-size: 20px;
-            font-family: Tahoma;
             padding: 10px 20px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
@@ -47,8 +48,8 @@
 
         #map {
             width: 100%;
-            height: 80vh; /* Ensure there's enough space for the map */
-            margin-top: 80px;
+            height: 80vh; /* Enough space for the map */
+            margin-top: 80px; /* Offset for the fixed navigation bar */
         }
     </style>
 </head>
@@ -63,7 +64,7 @@
     </div>
 
     <div id="map">
-        <!-- Вставка HTML карти -->
+        <!-- Display Folium map HTML -->
         {{ map_html|safe }}
     </div>
 </body>
