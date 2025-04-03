@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Militaris - Карта</title>
+    <style>
+        body {
+            background-color: #bfaa6a;
+            font-family: Tahoma;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navigation {
+            position: fixed;
+            background-color: #536b39;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .navigation_links {
+            display: flex;
+            gap: 50px;
+        }
+
+        .navigation_links button {
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 20px;
+            font-family: Tahoma;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navigation_links button:hover {
+            background-color: white;
+            color: #536b39;
+        }
+
+        #map {
+            width: 100%;
+            height: 80vh; /* Ensure there's enough space for the map */
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="navigation_links">
+            <button onclick="window.location.href='/'">Головна</button>
+            <button onclick="window.location.href='/wikipedia'">Довідник</button>
+            <button onclick="window.location.href='/map'">Карта</button>
+            <button onclick="window.location.href='/about'">Про нас</button>
+        </div>
+    </div>
+
+    <div id="map">
+        <!-- Вставка HTML карти -->
+        {{ map_html|safe }}
+    </div>
+</body>
+</html>

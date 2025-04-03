@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Militaris website</title>
-
         <style>
             img {
                 width: 1510px;
@@ -18,37 +17,37 @@
             .navigation {
                 position: fixed;
                 background-color: #536b39;
-                display: block;
+                display: flex; /* Changed from block to flex for proper alignment */
                 top: 0;
                 left: 0;
                 right: 0;
-                height: 60px; /* Increased height for buttons */
+                height: 60px;
                 justify-content: center;
                 align-items: center;
-                padding: 0 50px; /* Adjusted padding for better alignment */
+                padding: 0 50px;
                 z-index: 100;
             }
 
             .navigation_links {
                 display: flex;
-                gap: 50px; /* Reduced gap between buttons */
+                gap: 50px;
             }
 
             .navigation_links button {
                 color: white;
                 background-color: transparent;
-                border: 2px solid white; /* Border for better contrast */
-                border-radius: 30px; /* Rounded corners */
+                border: 2px solid white;
+                border-radius: 30px;
                 font-size: 20px;
                 font-family: Tahoma;
-                padding: 10px 20px; /* Padding for better button size */
+                padding: 10px 20px;
                 cursor: pointer;
-                transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+                transition: background-color 0.3s, color 0.3s;
             }
 
             .navigation_links button:hover {
-                background-color: white; /* Background color on hover */
-                color: #536b39; /* Text color change on hover */
+                background-color: white;
+                color: #536b39;
             }
 
             .image-container {
@@ -86,19 +85,18 @@
                 color: white;
                 font-size: 1.2em;
                 bottom: 10px;
-                background-color: #154c09; /* Adjusted background color */
+                background-color: #154c09;
                 border: none;
-                border-radius: 30px; /* Rounded corners */
+                border-radius: 30px;
                 padding: 10px 20px;
                 cursor: pointer;
-                transition: background-color 0.3s; /* Smooth transition for hover effect */
+                transition: background-color 0.3s;
             }
 
             .text-overlay button:hover {
-                background-color: #2a7027; /* Darker shade on hover */
+                background-color: #2a7027;
             }
         </style>
-
     </head>
     <body style="background-color: #bfaa6a;">
         <div class="navigation">
@@ -117,6 +115,5 @@
                 <button onclick="window.location.href='/about'">Про нас</button>
             </div>
         </div>
-
     </body>
 </html>
