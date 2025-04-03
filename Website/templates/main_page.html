@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>Militaris website</title>
@@ -10,7 +9,6 @@
                 height: 1000px;
                 object-fit: cover;
                 display: flex;
-
             }
             p.heading {
                 font-weight: bold;
@@ -23,7 +21,7 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                height: 50xpx;
+                height: 50px;
                 width: 1920px;
                 justify-content: space-between;
                 align-items: center;
@@ -31,9 +29,9 @@
             }
 
             .navigation_links {
-            display: flex;
-            gap: 200px;
-        }
+                display: flex;
+                gap: 200px;
+            }
 
             .navigation_links a {
                 color: white;
@@ -77,52 +75,27 @@
                 color: white;
                 font-size: 1.2em;
                 bottom: 10px;
-                /* margin: 10px 0 0; */
-                /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) */
             }
-            /* .name {
-                position: relative;
-                background-color: #536b39;
-                display: flex;
-                width: 500px;
-                height: 100px;
-            } */
         </style>
 
     </head>
     <body style="background-color: #bfaa6a;">
         <div class="navigation">
             <div class="navigation_links">
-                <a href="/main_page.html">Головна</a>
-                <a href="/wikipedia.html">Довідник</a>
-                <a href="/map.html">Карта</a>
-                 <a href="/about.html">Про нас</a>
+                <button onclick="window.location.href='/main_page'">Головна</button>
+                <button onclick="window.location.href='/wikipedia'">Довідник</button>
+                <button onclick="window.location.href='/map'">Карта</button>
+                <button onclick="window.location.href='/about'">Про нас</button>
             </div>
         </div>
         
-        <body>
-
-            <div class="image-container">
-                <img src="/images/cool.jpg">
-                <div class="text-overlay">
-                    <strong>ВІЙСЬКОВА ТЕХНІКА ТА БОЙОВІ КОНФЛІКТИ</strong>
-                    <button>Про нас</button>
-                </div>
+        <div class="image-container">
+            <img src="/images/cool.jpg">
+            <div class="text-overlay">
+                <strong>ВІЙСЬКОВА ТЕХНІКА ТА БОЙОВІ КОНФЛІКТИ</strong>
+                <button onclick="window.location.href='/about'">Про нас</button>
             </div>
+        </div>
 
     </body>
 </html>
-
-
-            <!-- <img src="images/cool.jpg">
-            <p class="heading">Військова техніка та бойові конфлікти</p>
-            <p>Про нас</p>
-    
-            <div class="name">
-                <div class="nametxt">
-                    <p>Військова техніка та бойові конфлікти</p>
-                </div>
-                <div class="abouttxt">
-                    <button>Про нас</button>
-                </div>
-            </div> -->
